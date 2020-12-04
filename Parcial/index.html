@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/index.js" type="module"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+
+    <a href="#"><img src="./images/logo.png" alt="Logo" width="100px"></a>
+    <nav>
+      <ul>
+        <li><a href="#">Nosotras</a></li>
+        <li><a href="#">Anuncios</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <p>
+  <h1>Administración</h1>
+  <img src="./images/header.jpg" alt="Banner" width="100%" class="desaparecerImg">
+  </p>
+
+  <main>
+
+    <section class="conteiner">
+      <form>
+        <fieldset>
+          <legend>Información del anuncio</legend>
+          <ul class="flex-outer">
+            <li>
+              <input class="deshabilitar" type="number" name="id" id="txtId">
+            </li>
+            <li>
+              <label for="txtTitulo">Titulo</label>
+              &nbsp;
+              <input type="text" name="titulo" id="txtTitulo" required>
+            </li>
+            <li>
+              <label>Transacción</label>
+              &nbsp;
+              <ul class="flex-inner">
+                <li>
+                  <label for="rdoV">
+                    <input type="radio" name="transaccion" id="rdoV" value="Venta" checked>Venta
+                  </label>
+                  &nbsp;
+                  <label for="rdoV">
+                    <input type="radio" name="transaccion" id="rdoA" value="Alquiler">Alquiler
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <label for="txtDescripcion">Descripcion</label>
+              &nbsp;
+              <input type="text" name="descripcion" id="txtDescripcion" required>
+            </li>
+
+            <li>
+              <label for="numbPrecio">Precio</label>
+              &nbsp;
+              <input type="number" name="precio" id="numbPrecio" required>
+            </li>
+
+            <li>
+              <label for="numbPuertas"><img src="./images/puertas.ico" alt="" width="20px"></label>
+              <input type="number" name="puertas" id="numbPuertas" placeholder="Puertas" required>
+              <label for="numbPotencia"><img src="./images/potencia.ico" alt="" width="20px"></label>
+              <input type="number" name="descripcion" required id="numbPotencia" placeholder="Potencia">
+              <label for="numbKMs"><img src="./images/kms.ico" alt="" width="20px"></label>
+              <input type="number" name="kms" id="numbKMs" placeholder="Kilómetros" required>
+            </li>
+
+            <li>
+              <input type="checkbox" id="frenos_ok" value="verifico_frenos" name="Frenos">Frenos
+              &nbsp;
+              <input type="checkbox" id="luces_ok" value="verifico_luces" name="Luces">Luces
+              &nbsp;
+              <input type="checkbox" id="aceite_ok" value="verifico_aceite" name="Aceite">Aceite
+            </li>
+
+
+            <li>
+              <label>Estado</label>
+              &nbsp;
+              <ul class="flex-inner">
+                <li>
+                  <label for="rdoN">
+                    <input type="radio" name="estado" id="rdoN" value="Nuevo" checked>Nuevo
+                  </label>
+                  &nbsp;
+                  <label for="rdoU">
+                    <input type="radio" name="estado" id="rdoU" value="Usado">Usado
+                  </label>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <button id="btnGuardar" class="botonVerde" type="submit"><img src="./images/guardar.ico" alt=""
+                  width="10px"></i>Guardar</button>
+              <button class="deshabilitar" id="btnBaja">Baja Anuncio</button>
+              <button class="deshabilitar" id="btnModificar" type="submit">Modificar Anuncio</button>
+              <button id="btnCancelar">Cancelar</button>
+              <button id="btnLimpiarTabla" type="reset">Limpiar tabla</button>
+            </li>
+
+
+          
+
+          </ul>
+
+        </fieldset>
+      </form>
+
+    </section class="conteiner">
+    <div class="alert slide-in-top" id="custom">
+      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    </div>
+    </section>
+
+    <section class="conteiner">
+      <div id="divTabla"></div>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Nosotras</a></li>
+        <li><a href="#">Anuncios</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+    <p>Todos los derechos reservados 2020</p>
+  </footer>
+</body>
+</html>
